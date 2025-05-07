@@ -32,7 +32,15 @@ def choose(chat_id):
     bot.send_message(chat_id, answer)
 
 
-def render_progressbar(total, iteration, prefix='', suffix='', length=30, fill='█', zfill='░'):
+def render_progressbar(
+    total,
+    iteration,
+    prefix='',
+    suffix='',
+    length=30,
+    fill='█',
+    zfill='░'
+):
     iteration = min(total, iteration)
     percent = "{0:.1f}"
     percent = percent.format(100 * (iteration / float(total)))
